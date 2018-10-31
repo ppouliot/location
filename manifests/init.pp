@@ -1,18 +1,22 @@
-class geolocation ( 
-  $baseurl = "http://api.ipstack.com/check/?access_key=",
-  $filename = "location.json",
-  $api_access_key,
+# Class: location
+# Usage:
+#  include ::location
+#
+class location (
+  $baseurl = 'http://api.ipstack.com/check/?access_key=',
+  $filename = 'location.json',
+  $api_access_key = undef,
   ) {
-  
+
   # Request format for ipstack.com
   # http://api.ipstack.com/134.201.250.155
   #  ? access_key = YOUR_ACCESS_KEY
   # 
   # http://api.ipstack.com/check?access_key=<API_TOKEN>
   # 
-  url = "${baseurl}${api_access_key}"
+  $url = "${baseurl}${api_access_key}"
   fetchfact::fetch { '$filename':
-    url => $url,
+    url      => $url,
     factfile => $filename
   }
-}  
+}

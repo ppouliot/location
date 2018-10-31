@@ -1,7 +1,7 @@
 location
 ========
 
-This module contacts an on-line geolocation service and stores
+This module contacts an [on-line geolocation service](http://ipstack.com) and stores
 several facts about the geographical location of the node.
 
 Warning
@@ -10,13 +10,14 @@ Warning
 *Do not retrieve facts from untrusted sources.* `location` does not
 do any sanity checking on the retrieved location information.
 
-By default, this module attempts to retrieve the node's location
-using the JSON service at http://freegeoip.net. This free service is
-limited to 1000 requests per hour, so you should not use it in
+By default, this module previously attempted to retrieve the node's location
+using the JSON service at http://freegeoip.net.  This free json api service has been 
+replaced by http://ipstack.com. This free service is
+limited to 10000 requests per month, so you should not use it in
 massively elastic or particularly large environments.
 
 However, the software running FreeGeoIP is freely available on
-[GitHub,](https://github.com/fiorix/freegeoip)
+[GitHub,](https://github.com/apilayer/freegeoip/)
 enabling you to run your own geo-location web service if you so
 choose.
 
@@ -29,7 +30,7 @@ following in your manifest:
     include location
 
 This will fetch your node's locative information from
-http://freegeoip.net/json/ and store it in
+http://api.ipstack.com/check?access_key=<YOUR_ACCESS_KEY> and store it in
 /etc/facter/facts.d/location.json.
 
 If you run your own service, or want to specify a non-default filename
@@ -62,4 +63,4 @@ this module.
 Support
 -------
 
-Please report issues on [GitHub](https://github.com/fghaas/location/issues).
+Please report issues on [GitHub](https://github.com/ppouliot/puppet-location/issues).

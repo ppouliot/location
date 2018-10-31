@@ -1,7 +1,7 @@
 class geolocation ( 
   $baseurl = "http://api.ipstack.com/check/?access_key=",
-  $filename = "location.json"
-  $api_access_key
+  $filename = "location.json",
+  $api_access_key,
   ) {
   
   # Request format for ipstack.com

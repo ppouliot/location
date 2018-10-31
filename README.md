@@ -51,12 +51,12 @@ the fact file and wait for the next agent run.
 License
 -------
 
-ASL 2.0.
+Apache 2.0.
 
 Contact
 -------
 
-Contact `puppetforge@hastexo.com` for any comments and questions about
+Contact `peter@pouliot.net` for any comments and questions about
 this module.
 
 

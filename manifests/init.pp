@@ -3,7 +3,7 @@
 #  include ::location
 #
 class location (
-  $baseurl = 'http://api.ipstack.com/check/?access_key=',
+  $baseurl = 'http://api.ipstack.com/check?access_key=',
   $filename = 'location.json',
   $api_access_key = undef,
   ) {
